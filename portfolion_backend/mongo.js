@@ -1,4 +1,7 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
+
+const mongoURI = process.env.MONGODB_URI;
 
 if (process.argv.length < 3) {
   console.log("give password as argument");
@@ -12,7 +15,7 @@ const personNumber = process.argv[4];
 const url = `mongodb+srv://portfolioHomepage:${password}@homepagecluster.c1ko96w.mongodb.net/homepageApp?retryWrites=true&w=majority`;
 
 mongoose.set("strictQuery", false);
-mongoose.connect(url);
+mongoose.connect(mongoURI);
 
 const puhelinluetteloSchema = new mongoose.Schema({
   name: String,
