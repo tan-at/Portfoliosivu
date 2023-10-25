@@ -1,7 +1,4 @@
 const mongoose = require("mongoose");
-require("dotenv").config();
-
-const mongoURI = process.env.MONGODB_URI;
 
 if (process.argv.length < 3) {
   console.log("give password as argument");
