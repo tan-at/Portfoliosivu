@@ -5,6 +5,7 @@ import personService from "./services/personComms";
 import personComms from "./services/personComms";
 import Notification from "./components/Notification";
 import CustomNavbar from "./components/Navbar";
+import { Container, Row, Col } from "react-bootstrap";
 
 const App = () => {
   const [persons, setPersons] = useState([]);
@@ -74,24 +75,36 @@ const App = () => {
   };
 
   return (
-    <div>
-      <CustomNavbar />
-      <div id="CRUD-app">
-        <h2>Phonebook</h2>
-        <Notification message={errorMessage} />
-        <div>
-          <h2>add a new</h2>
-          <PersonForm
-            newName={newName}
-            newNumber={newNumber}
-            handleNameChange={handleNameChange}
-            handleNumberChange={handleNumberChange}
-            addPerson={addPerson}
-          />
-          <h2>Numbers</h2>
-          <Persons persons={persons} handleDeletePerson={handleDeletePerson} />
-        </div>
-      </div>
+    <div className="background">
+      <Container fluid>
+        <Row>
+          <Col>
+            <CustomNavbar />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={10}>
+            <div id="CRUD-app">
+              <h2>Phonebook</h2>
+              <Notification message={errorMessage} />
+              <div>
+                <PersonForm
+                  newName={newName}
+                  newNumber={newNumber}
+                  handleNameChange={handleNameChange}
+                  handleNumberChange={handleNumberChange}
+                  addPerson={addPerson}
+                />
+                <h2>Numbers</h2>
+                <Persons
+                  persons={persons}
+                  handleDeletePerson={handleDeletePerson}
+                />
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
