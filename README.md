@@ -7,4 +7,4 @@ A React app communicating with a MongoDB database using Mongoose. Comes with ful
 ### TODO:
 
 - Clean redundant components
-- Add mor eprojects from GitHub
+- Add more projects from GitHub
