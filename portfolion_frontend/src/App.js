@@ -77,13 +77,11 @@ const App = () => {
   return (
     <div className="background_main">
       <Container fluid>
-        {/* Navbar */}
         <Row>
           <Col>
             <CustomNavbar />
           </Col>
         </Row>
-        {/* Section for introduction */}
         <section className="background2">
           <Container>
             <Row className="align-items-center justify-content-between">
@@ -112,7 +110,6 @@ const App = () => {
             </Row>
           </Container>
         </section>
-        {/* Section for CRUD-application */}
         <section id="CRUD-app" className="background1">
           <Container className="align-items-center justify-content-between">
             <Row>
@@ -155,7 +152,6 @@ const App = () => {
             </Row>
           </Container>
         </section>
-        {/* Section for more content */}
         <section id="Contact" className="background2">
           <Container className="centered-container">
             <Row className="align-items-center justify-content-between">
