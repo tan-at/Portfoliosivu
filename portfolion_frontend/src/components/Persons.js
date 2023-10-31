@@ -3,6 +3,7 @@ import Person from "./Person";
 const Persons = (props) => {
   return (
     <div>
+      <h3>Numbers</h3>
       {props.persons.map((person) => (
         <Person
           key={person.id}

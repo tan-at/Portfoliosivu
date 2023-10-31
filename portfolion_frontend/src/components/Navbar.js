@@ -1,18 +1,20 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
 function CustomNavbar() {
   return (
-    <Navbar bg="light" data-bs-theme="light" expand="lg" py="3">
-      <Navbar.Brand href="#home">Atte Portfolio</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#CRUD-app">Phonebook</Nav.Link>
-          <Nav.Link href="#Contact">Contact - Not yet added</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <Container className="px-5">
+      <Navbar data-bs-theme="light" expand="md" py="3">
+        <Navbar.Brand href="#home">Atte Portfolio</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#CRUD-app">Phonebook</Nav.Link>
+            <Nav.Link href="#Contact">Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </Container>
   );
 }
 

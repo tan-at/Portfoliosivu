@@ -1,9 +1,43 @@
 .error {
-  color: red;
-  background: lightgrey;
+  color: grey;
+  background: dad7cd;
   font-size: 20px;
+  color: #3a5a40;
   border-style: solid;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
+}
+
+.background_main {
+  background-color: #dad7cd;
+  height: 100%;
+}
+
+.background1 {
+  background-color: #dad7cd;
+  margin: 0 -15px;
+  padding: 15px;
+}
+
+.background2 {
+  background-color: #a3b18a;
+  margin: 0 -15px;
+  padding: 15px;
+}
+
+.background3 {
+  background-color: #3a5a40;
+  margin: 0 -15px;
+  padding: 15px;
+}
+
+.transparent-card {
+  background-color: transparent !important;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
