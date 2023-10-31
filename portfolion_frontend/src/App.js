@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Persons from "./components/Persons";
 import PersonForm from "./components/PersonForm";
 import personService from "./services/personComms";
 import personComms from "./services/personComms";
 import Notification from "./components/Notification";
 import CustomNavbar from "./components/Navbar";
-import { Container, Row, Col } from "react-bootstrap";
 
 const App = () => {
   const [persons, setPersons] = useState([]);
@@ -75,19 +75,69 @@ const App = () => {
   };
 
   return (
-    <div className="background">
+    <div className="background_main">
       <Container fluid>
+        {/* Navbar */}
         <Row>
           <Col>
             <CustomNavbar />
           </Col>
         </Row>
-        <Row>
-          <Col md={10}>
-            <div id="CRUD-app">
-              <h2>Phonebook</h2>
-              <Notification message={errorMessage} />
-              <div>
+        {/* Section for introduction */}
+        <section className="background2">
+          <Container>
+            <Row className="align-items-center justify-content-between">
+              <Col md className="p-5">
+                <h2>Atte Tanskanen</h2>
+                <p className="lead">Howdy there!</p>
+                <p>
+                  I'm Atte. I'm studying computer science as my master's at
+                  Tampere University with software engineering as my major.
+                </p>
+                <p>
+                  You can find some of my projects below. If you want to check
+                  my Linkedin or have a look at my GitHub for more of my
+                  projects, you can find links to those at the bottom of the
+                  page.
+                </p>
+              </Col>
+              <Col md className="centered-container">
+                <img
+                  src="https://media.licdn.com/dms/image/D4D03AQFOFXd5VKSFHA/profile-displayphoto-shrink_200_200/0/1664628875764?e=1704326400&v=beta&t=-8oZAbzMH6PUpgAABwz8hdU9TQMqUszCM8dIZ6-5G7A"
+                  fluid
+                  alt=""
+                  className="rounded-circle"
+                />
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        {/* Section for CRUD-application */}
+        <section id="CRUD-app" className="background1">
+          <Container className="align-items-center justify-content-between">
+            <Row>
+              <Col md className="p-5">
+                <h2>CRUD-Phonebook</h2>
+                <p>
+                  This is a fully CRUD functional app communicating with a
+                  <strong> MongoDB</strong> database using
+                  <strong> Mongoose</strong>. The frontend is made with
+                  <strong> React</strong> utilizing <strong> JavaScript</strong>
+                  , <strong> CSS</strong> and a <strong> Bootstrap </strong>
+                  library.
+                </p>
+                <p>
+                  I ended up making this wanting to see what I could do with
+                  what I'd learned during my university courses and the GitHub
+                  projects I've maded during my freetime.
+                </p>
+                <p>
+                  With the form below you can add a new user to the database. It
+                  will then show the user to you next to the form. The info you
+                  input to the form will persists in the database, so it will
+                  still be here the next time you come here. Give it a go : )
+                </p>
+                <Notification message={errorMessage} />
                 <PersonForm
                   newName={newName}
                   newNumber={newNumber}
@@ -95,15 +145,42 @@ const App = () => {
                   handleNumberChange={handleNumberChange}
                   addPerson={addPerson}
                 />
-                <h2>Numbers</h2>
+              </Col>
+              <Col md className="p-5">
                 <Persons
                   persons={persons}
                   handleDeletePerson={handleDeletePerson}
                 />
-              </div>
-            </div>
-          </Col>
-        </Row>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        {/* Section for more content */}
+        <section id="Contact" className="background2">
+          <Container className="centered-container">
+            <Row className="align-items-center justify-content-between">
+              <Col md className="px-5 py-4">
+                <a href="https://www.linkedin.com/in/atte-tanskanen/">
+                  <img
+                    src="https://raw.githubusercontent.com/gauravghongde/social-icons/master/PNG/Color/LinkedIN.png"
+                    alt="LinkedIn"
+                    width="40"
+                    height="40"
+                  />
+                </a>
+                <a href="https://github.com/tan-at">
+                  <img
+                    src="https://raw.githubusercontent.com/gauravghongde/social-icons/master/PNG/Color/Github.png"
+                    alt="GitHub"
+                    width="40"
+                    height="40"
+                    style={{ marginLeft: "20px" }}
+                  />
+                </a>
+              </Col>
+            </Row>
+          </Container>
+        </section>
       </Container>
     </div>
   );

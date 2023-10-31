@@ -3,19 +3,19 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const PersonForm = (props) => {
   return (
-    <Container>
+    <div>
       <Row>
-        <Col xs={8} sm={8} md={8}>
-          <h2>Add a new number</h2>
+        <Col xs={8} sm={8} md={12} lg={8} xl={8}>
+          <h3>Add a new number</h3>
           <Form onSubmit={props.addPerson}>
-            <Form.Group>
+            <Form.Group className="mb-1">
               <Form.Label>Name:</Form.Label>
               <Form.Control
                 value={props.newName}
                 onChange={props.handleNameChange}
               />
             </Form.Group>
-            <Form.Group>
+            <Form.Group className="mb-3">
               <Form.Label>Number:</Form.Label>
               <Form.Control
                 value={props.newNumber}
@@ -28,7 +28,7 @@ const PersonForm = (props) => {
           </Form>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 
