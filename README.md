@@ -6,7 +6,5 @@ A React app communicating with a MongoDB database using Mongoose. Comes with ful
 
 ### TODO:
 
-- Make frontend look nice :)
-- Add responsivity with bootstrap
 - Clean redundant components
-- Add content
+- Add more projects from GitHub
