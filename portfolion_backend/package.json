@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build && cd ../frontend && npm run build && cp -r build ../backend",
+    "build": "rm -rf build && cd ../portfolion_frontend && npm run build && cp -r build ../portfolion_backend",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
     "lint": "eslint ."
   },
