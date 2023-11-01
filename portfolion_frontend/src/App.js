@@ -95,16 +95,18 @@ const App = () => {
                 <p>
                   You can find some of my projects below. If you want to check
                   my Linkedin or have a look at my GitHub for more of my
-                  projects, you can find links to those at the bottom of the
-                  page.
+                  projects or their source code, you can find links to those at
+                  the bottom of the page.
                 </p>
               </Col>
               <Col md className="centered-container">
                 <img
-                  src="https://media.licdn.com/dms/image/D4D03AQFOFXd5VKSFHA/profile-displayphoto-shrink_200_200/0/1664628875764?e=1704326400&v=beta&t=-8oZAbzMH6PUpgAABwz8hdU9TQMqUszCM8dIZ6-5G7A"
+                  src="https://avatars.githubusercontent.com/u/94180117?v=4"
                   fluid
                   alt=""
                   className="rounded-circle"
+                  width="300"
+                  height="300"
                 />
               </Col>
             </Row>
@@ -117,7 +119,8 @@ const App = () => {
                 <h2>CRUD-Phonebook</h2>
                 <p>
                   This is a fully CRUD functional app communicating with a
-                  <strong> MongoDB</strong> database using
+                  <strong> MongoDB</strong> database using{" "}
+                  <strong> Node</strong> and
                   <strong> Mongoose</strong>. The frontend is made with
                   <strong> React</strong> utilizing <strong> JavaScript</strong>
                   , <strong> CSS</strong> and a <strong> Bootstrap </strong>
