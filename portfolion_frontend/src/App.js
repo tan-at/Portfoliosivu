@@ -102,7 +102,6 @@ const App = () => {
               <Col md className="centered-container">
                 <img
                   src="https://avatars.githubusercontent.com/u/94180117?v=4"
-                  fluid
                   alt=""
                   className="rounded-circle"
                   width="300"
