@@ -6,6 +6,7 @@ import personService from "./services/personComms";
 import personComms from "./services/personComms";
 import Notification from "./components/Notification";
 import CustomNavbar from "./components/Navbar";
+import kaupunkisuunnistus from "./images/kaupunkisuunnistus.png";
 
 const App = () => {
   const [persons, setPersons] = useState([]);
@@ -157,10 +158,16 @@ const App = () => {
         <section id="Orienteering-app" className="background2">
           <Container className="align-items-center justify-content-between">
             <Row>
-              <Col md className="p-5">
-                <p>Placeholder</p>
+              <Col lg className="p-5">
+                <img
+                  src={kaupunkisuunnistus}
+                  width="100%"
+                  height="auto"
+                  alt="City Orienteering App"
+                  className="img-fluid"
+                ></img>
               </Col>
-              <Col md className="p-5">
+              <Col lg className="p-5">
                 <h2>City Orienteering App for Skripti ry</h2>
                 <p>
                   This app was made for our client Skripti ry as a part of the
@@ -188,7 +195,7 @@ const App = () => {
                   <strong> CSS</strong>.
                 </p>
                 <p>
-                  The app is hosted{" "}
+                  The app can be found hosted by Skripti ry{" "}
                   <a href="https://kaupunkisuunnistus.vercel.app/">here</a>
                 </p>
               </Col>
