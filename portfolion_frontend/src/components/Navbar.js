@@ -10,6 +10,7 @@ function CustomNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="#CRUD-app">Phonebook</Nav.Link>
+            <Nav.Link href="#Orienteering-app">Orienteering app</Nav.Link>
             <Nav.Link href="#Contact">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -6,6 +6,7 @@ import personService from "./services/personComms";
 import personComms from "./services/personComms";
 import Notification from "./components/Notification";
 import CustomNavbar from "./components/Navbar";
+import kaupunkisuunnistus from "./images/kaupunkisuunnistus.png";
 
 const App = () => {
   const [persons, setPersons] = useState([]);
@@ -102,7 +103,6 @@ const App = () => {
               <Col md className="centered-container">
                 <img
                   src="https://avatars.githubusercontent.com/u/94180117?v=4"
-                  fluid
                   alt=""
                   className="rounded-circle"
                   width="300"
@@ -155,7 +155,54 @@ const App = () => {
             </Row>
           </Container>
         </section>
-        <section id="Contact" className="background2">
+        <section id="Orienteering-app" className="background2">
+          <Container className="align-items-center justify-content-between">
+            <Row>
+              <Col lg className="p-5">
+                <img
+                  src={kaupunkisuunnistus}
+                  width="100%"
+                  height="auto"
+                  alt="City Orienteering App"
+                  className="img-fluid"
+                ></img>
+              </Col>
+              <Col lg className="p-5">
+                <h2>City Orienteering App for Skripti ry</h2>
+                <p>
+                  This app was made for our client Skripti ry as a part of the
+                  software engineering 2 course during my bachelors studies. The
+                  app has been used in Joensuu for city orienteering events and
+                  ATK-YTP 2023.
+                </p>
+                <p>
+                  The users are able to access a map to see where the event's
+                  checkpoints are. The app comes with a functionality to check
+                  for user credentials, and a properly authorized administrative
+                  user is able to add teams to the event, give them points, and
+                  set up checkpoints for the map displayed on the app.
+                </p>
+                <p>
+                  Our group designed and built the project utilizing{" "}
+                  <strong> SCRUM</strong>, <strong> Agile </strong> methods and{" "}
+                  <strong> Microsoft Azure DevOps </strong> as the main tools
+                  for organizing the project.
+                </p>
+                <p>
+                  Technologies used:<strong> MongoDB</strong>,
+                  <strong> Node</strong>,<strong> Mongoose</strong>,
+                  <strong> React</strong>, <strong> JavaScript</strong> and{" "}
+                  <strong> CSS</strong>.
+                </p>
+                <p>
+                  The app can be found hosted by Skripti ry{" "}
+                  <a href="https://kaupunkisuunnistus.vercel.app/">here</a>
+                </p>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        <section id="Contact" className="background1">
           <Container className="centered-container">
             <Row className="align-items-center justify-content-between">
               <Col md className="px-5 py-4">
